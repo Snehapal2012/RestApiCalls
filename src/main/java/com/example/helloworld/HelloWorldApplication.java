@@ -1,5 +1,7 @@
 package com.example.helloworld;
 
+
+import com.example.helloworld.controller.HelloRestController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,5 +12,4 @@ public class HelloWorldApplication {
         System.out.println("Hello from BridgeLabz!!!");
         SpringApplication.run(HelloWorldApplication.class, args);
     }
-
 }

@@ -1,12 +1,12 @@
 package com.example.helloworld.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping(value={"/home","/"},method = RequestMethod.GET)
 public class HelloRestController {
-    @RequestMapping("/index")
-    public String index(){
-        return "Hello from BridgeLabz!!!!!!!!!!!";
+    @GetMapping(path="/{name}")
+    public String getName(@RequestParam(value = "name", defaultValue = "Sneha") String name){
+        return "<h1>Hii "+name+" ! Welcome to BridgeLabz!</h1>";
     }
 }
